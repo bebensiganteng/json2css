@@ -1,15 +1,9 @@
-/*
-Icon classes can be used entirely standalone. They are named after their original file names.
-
-```html
-<i class="icon-home"></i>
-```
-*/
 {{#items}}
 {{class}} {
   background-image: url({{{escaped_image}}});
-  background-position: {{px.offset_x}} {{px.offset_y}};
-  width: {{px.width}};
-  height: {{px.height}};
+  background-position: {{px.o_x_half}} {{px.o_y_half}};
+  background-size: {{px.t_w_half}} {{px.t_h_half}};
+  width: {{px.w_half}};
+  height: {{px.h_half}};
 }
 {{/items}}
