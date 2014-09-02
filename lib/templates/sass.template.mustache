@@ -1,24 +1,11 @@
 {{#items}}
-
 {{class}}
-  background-image: url({{{escaped_image}}}) {{px.offset_x}} {{px.offset_y}} no-repeat
-  -webkit-background-size: {{px.total_width}} {{px.total_height}}
-  -moz-background-size: {{px.total_width}} {{px.total_height}}
-  -o-background-size: {{px.total_width}} {{px.total_height}}
-  background-size: {{px.total_width}} {{px.total_height}}
-  width: {{px.width}}
-  height: {{px.height}}
-  
+  background-image: url({{{escaped_image}}})
+  background-position: {{px.o_x_half}} {{px.o_y_half}}
+  -webkit-background-size: {{px.t_w_half}} {{px.t_h_half}}
+  -moz-background-size: {{px.t_w_half}} {{px.t_h_half}}
+  -o-background-size: {{px.t_w_half}} {{px.t_h_half}}
+  background-size: {{px.t_w_half}} {{px.t_h_half}}
+  width: {{px.w_half}}
+  height: {{px.h_half}}
 {{/items}}
-
-@media (min--moz-device-pixel-ratio: 1.5),(-o-min-device-pixel-ratio: 1.5/1),(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
-  {{#items}}
-
-  {{class}}
-    background: url({{{escaped_image}}}) {{px.o_x_half}} {{px.o_y_half}} no-repeat
-    -webkit-background-size: {{px.t_w_half}} {{px.t_h_half}}
-    -moz-background-size: {{px.t_w_half}} {{px.t_h_half}}
-    -o-background-size: {{px.t_w_half}} {{px.t_h_half}}
-    background-size: {{px.t_w_half}} {{px.t_h_half}}
-
-  {{/items}}
